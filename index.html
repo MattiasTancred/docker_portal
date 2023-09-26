@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Tkinter GUI</title>
+</head>
+<body>
+<button id="run-button">Run Tkinter GUI</button>
+
+<script>
+    document.getElementById('run-button').addEventListener('click', function() {
+        console.log('Button clicked!');
+        fetch('/run_gui', {
+            method: 'POST',
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    });
+</script>
+</body>
+</html>
