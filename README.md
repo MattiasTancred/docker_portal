@@ -1,6 +1,6 @@
 # docker_portal
 #Build your Docker image:
-/n
+
 sudo docker build -t flask-app .
 
 #Allow Docker to communicate with your X server:
